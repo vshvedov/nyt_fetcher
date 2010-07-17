@@ -47,6 +47,6 @@ for i in (0..total_pages)
     puts ba
     puts sqft
     puts posted_at
-    puts "------------- Page: #{i}"
+    puts "----------- Page: #{i}"
   end
 end
