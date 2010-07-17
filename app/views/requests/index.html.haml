@@ -1,0 +1,11 @@
+- title "Requests"
+
+%table
+  %tr
+    %th Request
+  - for request in @requests
+    %tr
+      %td= link_to request.title + " > " + time_ago_in_words(h request.created_at) + " ago", request
+      %td= link_to '[x]', request, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Request", new_request_path

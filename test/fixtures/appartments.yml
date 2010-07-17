@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  price: MyString
+  bd: MyString
+  ba: MyString
+  sqft: MyString
+  posted_at: MyString
+  request_id: 1
+
+two:
+  title: MyString
+  price: MyString
+  bd: MyString
+  ba: MyString
+  sqft: MyString
+  posted_at: MyString
+  request_id: 1
