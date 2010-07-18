@@ -13733,3 +13733,168 @@ Rendering template within layouts/application
 Rendering requests/show
 Rendered requests/_items_list (7.6ms)
 Completed in 27ms (View: 13, DB: 2) | 200 OK [http://localhost/requests/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#index (for 127.0.0.1 at 2010-07-18 03:39:54) [GET]
+  [4;35;1mRequest Load (0.2ms)[0m   [0mSELECT * FROM `requests` [0m
+Rendering template within layouts/application
+Rendering requests/index
+  [4;36;1mRequest Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `requests`[0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/requests]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#new (for 127.0.0.1 at 2010-07-18 03:40:07) [GET]
+  [4;35;1mRequest Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `requests`[0m
+Rendering template within layouts/application
+Rendering requests/new
+Rendered requests/_form (7.8ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/requests/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#index (for 127.0.0.1 at 2010-07-18 03:40:09) [GET]
+  [4;36;1mRequest Load (0.2ms)[0m   [0;1mSELECT * FROM `requests` [0m
+Rendering template within layouts/application
+Rendering requests/index
+  [4;35;1mRequest Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `requests`[0m
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://localhost/requests]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#new (for 127.0.0.1 at 2010-07-18 04:01:53) [GET]
+  [4;36;1mRequest Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `requests`[0m
+Rendering template within layouts/application
+Rendering requests/new
+Rendered requests/_form (5.1ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/requests/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#index (for 127.0.0.1 at 2010-07-18 04:01:58) [GET]
+  [4;35;1mRequest Load (0.2ms)[0m   [0mSELECT * FROM `requests` [0m
+Rendering template within layouts/application
+Rendering requests/index
+  [4;36;1mRequest Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `requests`[0m
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/requests]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#show (for 127.0.0.1 at 2010-07-18 04:49:03) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mRequest Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `requests`[0m
+  [4;36;1mRequest Load (0.1ms)[0m   [0;1mSELECT * FROM `requests` WHERE (`requests`.`id` = 5) [0m
+  [4;35;1mAppartment Load (0.2ms)[0m   [0mSELECT * FROM `appartments` WHERE (`appartments`.request_id = 5) LIMIT 0, 20[0m
+  [4;36;1mAppartment Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `appartments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `appartments` WHERE (`appartments`.request_id = 5) [0m
+Rendering template within layouts/application
+Rendering requests/show
+Rendered requests/_items_list (8.2ms)
+Completed in 29ms (View: 14, DB: 2) | 200 OK [http://localhost/requests/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#show (for 127.0.0.1 at 2010-07-18 04:49:05) [GET]
+  Parameters: {"authenticity_token"=>"Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY=", "id"=>"5", "sort"=>"price"}
+  [4;36;1mRequest Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `requests`[0m
+  [4;35;1mRequest Load (0.2ms)[0m   [0mSELECT * FROM `requests` WHERE (`requests`.`id` = 5) [0m
+  [4;36;1mAppartment Load (6.1ms)[0m   [0;1mSELECT * FROM `appartments` WHERE (`appartments`.request_id = 5) ORDER BY price LIMIT 0, 20[0m
+  [4;35;1mAppartment Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `appartments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `appartments` WHERE (`appartments`.request_id = 5) [0m
+Rendered requests/_items_list (8.7ms)
+Completed in 30ms (View: 9, DB: 8) | 200 OK [http://localhost/requests/5?sort=price&authenticity_token=Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#show (for 127.0.0.1 at 2010-07-18 04:49:07) [GET]
+  Parameters: {"authenticity_token"=>"Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY=", "id"=>"5", "sort"=>"price_reverse"}
+  [4;35;1mRequest Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `requests`[0m
+  [4;36;1mRequest Load (0.5ms)[0m   [0;1mSELECT * FROM `requests` WHERE (`requests`.`id` = 5) [0m
+  [4;35;1mAppartment Load (6.1ms)[0m   [0mSELECT * FROM `appartments` WHERE (`appartments`.request_id = 5) ORDER BY price DESC LIMIT 0, 20[0m
+  [4;36;1mAppartment Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `appartments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `appartments` WHERE (`appartments`.request_id = 5) [0m
+Rendered requests/_items_list (9.6ms)
+Completed in 119ms (View: 10, DB: 9) | 200 OK [http://localhost/requests/5?authenticity_token=Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY%3D&sort=price_reverse&authenticity_token=Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#index (for 127.0.0.1 at 2010-07-18 04:49:09) [GET]
+  [4;36;1mRequest Load (0.2ms)[0m   [0;1mSELECT * FROM `requests` [0m
+Rendering template within layouts/application
+Rendering requests/index
+  [4;35;1mRequest Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `requests`[0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/requests]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#show (for 127.0.0.1 at 2010-07-18 04:49:13) [GET]
+  Parameters: {"authenticity_token"=>"Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY=", "id"=>"5", "sort"=>"sqft"}
+  [4;36;1mRequest Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `requests`[0m
+  [4;35;1mRequest Load (0.1ms)[0m   [0mSELECT * FROM `requests` WHERE (`requests`.`id` = 5) [0m
+  [4;36;1mAppartment Load (10.8ms)[0m   [0;1mSELECT * FROM `appartments` WHERE (`appartments`.request_id = 5) ORDER BY sqft LIMIT 0, 20[0m
+  [4;35;1mAppartment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `appartments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `appartments` WHERE (`appartments`.request_id = 5) [0m
+Rendered requests/_items_list (8.7ms)
+Completed in 34ms (View: 9, DB: 13) | 200 OK [http://localhost/requests/5?sort=sqft&authenticity_token=Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#show (for 127.0.0.1 at 2010-07-18 04:49:14) [GET]
+  Parameters: {"authenticity_token"=>"Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY=", "id"=>"5", "sort"=>"price"}
+  [4;35;1mRequest Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `requests`[0m
+  [4;36;1mRequest Load (0.1ms)[0m   [0;1mSELECT * FROM `requests` WHERE (`requests`.`id` = 5) [0m
+  [4;35;1mAppartment Load (0.3ms)[0m   [0mSELECT * FROM `appartments` WHERE (`appartments`.request_id = 5) ORDER BY price LIMIT 0, 20[0m
+  [4;36;1mAppartment Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `appartments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `appartments` WHERE (`appartments`.request_id = 5) [0m
+Rendered requests/_items_list (9.1ms)
+Completed in 24ms (View: 10, DB: 2) | 200 OK [http://localhost/requests/5?authenticity_token=Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY%3D&sort=price&authenticity_token=Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#show (for 127.0.0.1 at 2010-07-18 04:49:16) [GET]
+  Parameters: {"authenticity_token"=>"Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY=", "id"=>"5", "sort"=>"title"}
+  [4;36;1mRequest Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `requests`[0m
+  [4;35;1mRequest Load (0.1ms)[0m   [0mSELECT * FROM `requests` WHERE (`requests`.`id` = 5) [0m
+  [4;36;1mAppartment Load (0.1ms)[0m   [0;1mSELECT * FROM `appartments` WHERE (`appartments`.request_id = 5) ORDER BY title LIMIT 0, 20[0m
+  [4;35;1mAppartment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `appartments`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `appartments` WHERE (`appartments`.request_id = 5) [0m
+Rendered requests/_items_list (100.2ms)
+Completed in 117ms (View: 101, DB: 2) | 200 OK [http://localhost/requests/5?authenticity_token=Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY%3D&sort=title&authenticity_token=Nv5xPLLrRSLsOQNQAYs3LT3xf9Ji4xoLdfHLtnlOsnY%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#index (for 127.0.0.1 at 2010-07-18 04:49:18) [GET]
+  [4;35;1mRequest Load (0.2ms)[0m   [0mSELECT * FROM `requests` [0m
+Rendering template within layouts/application
+Rendering requests/index
+  [4;36;1mRequest Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `requests`[0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/requests]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RequestsController#show (for 127.0.0.1 at 2010-07-18 04:49:20) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mRequest Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `requests`[0m
+  [4;36;1mRequest Load (0.1ms)[0m   [0;1mSELECT * FROM `requests` WHERE (`requests`.`id` = 6) [0m
+  [4;35;1mAppartment Load (0.1ms)[0m   [0mSELECT * FROM `appartments` WHERE (`appartments`.request_id = 6) LIMIT 0, 20[0m
+  [4;36;1mAppartment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `appartments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `appartments` WHERE (`appartments`.request_id = 6) [0m
+Rendering template within layouts/application
+Rendering requests/show
+Rendered requests/_items_list (8.5ms)
+Completed in 27ms (View: 14, DB: 2) | 200 OK [http://localhost/requests/6]

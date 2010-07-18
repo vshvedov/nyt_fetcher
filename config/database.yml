@@ -43,6 +43,6 @@ production:
   reconnect: false
   database: nyt_fetch_production
   pool: 5
-  username: root
-  password: 
+  username: nyt
+  password: nyt
   socket: /var/run/mysqld/mysqld.sock
