@@ -6,8 +6,28 @@ class RequestsController < ApplicationController
   end
   
   def show
+   sort = case params['sort']
+           when "title"  then "title"
+           when "bd"   then "bd"
+           when "ba" then "ba"
+           when "price" then "price"
+           when "sqft" then "sqft"
+           when "posted_at" then "posted_at"
+           when "title_reverse" then "title DESC"
+           when "bd_reverse" then "bd DESC"
+           when "ba_reverse" then "ba DESC"
+           when "price_reverse" then "price DESC"
+           when "sqft_reverse" then "sqft DESC"
+           when "posted_at_reverse" then "posted_at DESC"
+   end
+    #conditions = ["property_no LIKE ?", "%#{params[:query]}%"] unless params[:query].nil?
+
     @request = Request.find(params[:id])
-    @appartments = @request.appartments.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 20 
+    @appartments = @request.appartments.paginate :page => params[:page], :order => sort, :per_page => 20#, :conditions => conditions
+    
+    if request.xml_http_request?
+      render :partial => "items_list", :layout => false
+    end
   end
   
   def new

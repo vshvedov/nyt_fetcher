@@ -1,0 +1,20 @@
+%table
+  %tr
+    %th= sort_link "Title", "title"
+    %th= sort_link "Price", "price"
+    %th= sort_link "BD", "bd"
+    %th= sort_link "BA", "ba"
+    %th= sort_link "Sq. Ft.", "sqft"
+    %th= sort_link "Posted days ago", "posted_at"
+    %th Request ID
+  - @appartments.each do |a|
+    %tr
+      %td= a.title
+      %td= a.price
+      %td= a.bd
+      %td= a.ba
+      %td= a.sqft
+      %td= a.posted_at
+      %td= a.request_id
+%p
+  =will_paginate @appartments

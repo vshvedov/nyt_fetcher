@@ -1,31 +1,14 @@
 - title "Request"
 %h1= link_to "< Back to requests", requests_path
-
 %p
   %strong Title:
   =h @request.title
 
 %p
-  %table
-    %tr
-      %th Title
-      %th Price
-      %th BD
-      %th BA
-      %th Sq. Ft.
-      %th Posted days ago
-      %th Request ID
-    - @appartments.each do |a|
-      %tr
-        %td= a.title
-        %td= a.price
-        %td= a.bd
-        %td= a.ba
-        %td= a.sqft
-        %td= a.posted_at
-        %td= a.request_id
-%p
-  =will_paginate @appartments
+  = image_tag("/images/spinner.gif", :align => "absmiddle", :id => "spinner", :style =>"display: none;" )
+
+#table
+  = render :partial => "items_list"
 %p
   = link_to "Edit", edit_request_path(@request)
   |
